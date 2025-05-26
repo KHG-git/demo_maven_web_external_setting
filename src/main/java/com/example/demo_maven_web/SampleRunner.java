@@ -11,6 +11,7 @@ import org.springframework.boot.ApplicationRunner;
 @Component
 public class SampleRunner implements ApplicationRunner {
 
+    //@Value("${khg.name}")
     @Value("${khg.name}")
     private String name;
 
