@@ -10,12 +10,7 @@ import java.io.PrintWriter;
 
 @SpringBootApplication
 public class DemoMavenWebApplication {
-
 	public static void main(String[] args) {
-
 		SpringApplication.run(DemoMavenWebApplication.class, args);
-
-
 	}
-
 }
