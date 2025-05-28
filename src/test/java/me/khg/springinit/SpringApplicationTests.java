@@ -17,9 +17,9 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 //@ExtendWith(SampleRunner.class)
 //아래처럼 써도 됨 일단 주석
 //@SpringBootTest(classes = DemoMavenWebApplication.class, properties="khg.name=kang22222333444" )
-@TestPropertySource(locations="classpath:/test.properties")
 //@TestPropertySource(properties="khg.name=kang22222333444")
 @SpringBootTest(classes = DemoMavenWebApplication.class)
+@TestPropertySource(locations="classpath:/test.properties")
 public class SpringApplicationTests {
 
     @Autowired
@@ -28,7 +28,7 @@ public class SpringApplicationTests {
     @Test
     public void contextLoads() {
         assertThat(environment.getProperty("khg.name"))
-                .isEqualTo("kang33");
+                .isEqualTo("kang22");
     }
 
 }

@@ -39,11 +39,11 @@ import java.io.PrintWriter;
 //@EnableConfigurationProperties(KangProperties.class)
 public class DemoMavenWebApplication {
 
-	@ConfigurationProperties("server")
-	@Bean
-	public ServerProperties serverProperties() {
-		return new ServerProperties();
-	}
+//	@ConfigurationProperties("server")
+//	@Bean
+//	public ServerProperties serverProperties() {
+//		return new ServerProperties();
+//	}
 
 	public static void main(String[] args) {
 

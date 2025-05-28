@@ -21,6 +21,10 @@ public class SampleRunner implements ApplicationRunner {
 //    private int age;
 
     @Autowired
+    private String hello;
+
+
+    @Autowired
     KangProperties kangProperties;
 
 
@@ -31,6 +35,7 @@ public class SampleRunner implements ApplicationRunner {
         System.out.println("age : " + kangProperties.getAge());
         System.out.println("fullName : " + kangProperties.getFullName());
         System.out.println("seestionTimeout : " + kangProperties.getSeesionTimeout());
+        System.out.println("hello : "+ hello);
         System.out.println("===========================");
     }
 }
