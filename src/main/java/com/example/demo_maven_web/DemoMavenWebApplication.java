@@ -24,15 +24,32 @@ package com.example.demo_maven_web;
 
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.web.ServerProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 @SpringBootApplication
+//@EnableConfigurationProperties(KangProperties.class)
 public class DemoMavenWebApplication {
+
+	@ConfigurationProperties("server")
+	@Bean
+	public ServerProperties serverProperties() {
+		return new ServerProperties();
+	}
+
 	public static void main(String[] args) {
-		SpringApplication.run(DemoMavenWebApplication.class, args);
+
+		//SpringApplication.run(DemoMavenWebApplication.class, args);
+		SpringApplication app = new SpringApplication(DemoMavenWebApplication.class);
+		app.setWebApplicationType((WebApplicationType.NONE));
+		app.run(args);
 	}
 }
