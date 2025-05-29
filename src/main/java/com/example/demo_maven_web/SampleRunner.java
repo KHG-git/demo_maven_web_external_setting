@@ -42,12 +42,20 @@ public class SampleRunner implements ApplicationRunner {
 
 
         logger.info("===========================");
-        logger.info("logger name : " + kangProperties.getName());
-        logger.info("logger age : " + kangProperties.getAge());
-        logger.info("logger fullName : " + kangProperties.getFullName());
-        logger.info("logger seestionTimeout : " + kangProperties.getSeesionTimeout());
-        logger.info("logger hello : "+ hello);
+        logger.info("logger[info] name : " + kangProperties.getName());
+        logger.info("logger[info] age : " + kangProperties.getAge());
+        logger.info("logger[info] fullName : " + kangProperties.getFullName());
+        logger.info("logger[info] seestionTimeout : " + kangProperties.getSeesionTimeout());
+        logger.info("logger[info] hello : "+ hello);
         logger.info("===========================");
+
+        logger.debug("===========================");
+        logger.debug("logger[debug] name : " + kangProperties.getName());
+        logger.debug("logger[debug] age : " + kangProperties.getAge());
+        logger.debug("logger[debug] fullName : " + kangProperties.getFullName());
+        logger.debug("logger[debug] seestionTimeout : " + kangProperties.getSeesionTimeout());
+        logger.debug("logger[debug] hello : "+ hello);
+        logger.debug("===========================");
 
         System.out.println("===========================");
         System.out.println("name : " + kangProperties.getName());
